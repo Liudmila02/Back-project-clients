@@ -1,14 +1,17 @@
-import cors from 'cors'
-const routes = require('./src/routes');
+import express from'express';
+
+import session from 'express-session';
 import redis from './src/redis';
 import passport from './src/passport';
 import connectRedis from 'connect-redis';
 import cookieParser from 'cookie-parser';
-import session from 'express-session';
-const express = require('express');
+import cors from 'cors'
+
 const bodyParser = require('body-parser');
+const routes = require('./src/routes');
 
 const app = express();
+
 app.use(
   cors({
     origin(origin, cb) {
