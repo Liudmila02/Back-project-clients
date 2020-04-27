@@ -63,7 +63,8 @@ class Clients {
     try{ 
       await Client
       .destroy({
-        where:{id: req.params.id}
+        where:{id: req.params.id},
+        include: [{model: await History.destroy({where:{order_id: req.params.id}})}]
       })
       res.status(200).send({
         message: 'Order successfully deleted'
@@ -108,7 +109,8 @@ class Clients {
   static async table(req, res) {
     return History
       .findAll({
-        where:{}})
+        where:{}
+      })
       .then(histories => res.status(200).send(histories));
   }
 }
