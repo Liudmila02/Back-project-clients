@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-watch server.js",
-    "heroku-postbuild": "cd project && npm install && npm run build"
+    "heroku-postbuild": "cd ../Front/project && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
