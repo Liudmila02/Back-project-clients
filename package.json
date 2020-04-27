@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "npm run start --prefix project",
+    "client": "npm run start --prefix ../Front/project",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run project\"",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run ../Front/project\"",
     "start": "babel-watch server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix project && npm run build --prefix project" 
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../Front/project && npm run build --prefix ../Front/project" 
   },
   "author": "",
   "license": "ISC",
