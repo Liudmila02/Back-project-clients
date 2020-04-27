@@ -82,7 +82,7 @@ module.exports = function (app) {
     return response.status(200).json(history)
   });
 
-  app.get('/histories', Clients.table);
+  app.get('/histories', isAuthenticated, Clients.table);
 }
 
 function isAuthenticated(req, res, next) {

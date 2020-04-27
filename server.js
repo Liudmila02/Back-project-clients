@@ -51,7 +51,7 @@ app.use(passport.session());
 routes(app);
 
 app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the clients .',
+  message: 'Welcome to the .. .',
 }));
 
 const port = process.env.PORT || 4000;
